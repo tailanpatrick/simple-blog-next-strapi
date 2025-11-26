@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+    blog_next_strapi:
+        container_name: blog_next_strapi
+        hostname: blog_next_strapi
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: senha
+            POSTGRES_DB: blog-next-strapi
+            PGDATA: /var/lib/postgresql/data/pgdata
+        volumes:
+            - c:\users\Tailan Patrick\.PostgressData\postgresonly\blog_next_strapi:/var/lib/postgresql/data/pgdata
+
+        ports:
+            - 5433:5432
